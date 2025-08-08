@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #F45100, #a88043);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Efeito de fade + subida */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplica efeito em sequência */
+.container > * {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.container > *:nth-child(1) { animation-delay: 0.2s; }
+.container > *:nth-child(2) { animation-delay: 0.4s; }
+.container > *:nth-child(3) { animation-delay: 0.6s; }
+.container > *:nth-child(4) { animation-delay: 0.8s; }
+
+.container {
+  max-width: 600px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+h1 span {
+  color: #146b0c;
+  display: block;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.bem-vindo {
+  font-size: 2.2em;
+  color: #fff;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.btn {
+  background-color: #146b0c;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+}
+
+/* Estilo do botão sair */
+.sair {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sair:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

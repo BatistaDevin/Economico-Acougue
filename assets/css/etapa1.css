@@ -1,0 +1,68 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #F45100, #146b0c);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 900px;
+  width: 90%;
+  padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.mensagem {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 12px;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.botao-container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 720px;
+}
+
+button {
+  padding: 12px 28px;
+  background-color: #146b0c;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0f4e08;
+  transform: translateY(-2px);
+}

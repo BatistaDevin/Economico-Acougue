@@ -1,0 +1,203 @@
+/* Fundo e alinhamento geral */
+body {
+  background: linear-gradient(135deg, #F45100, #a88043);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Container com animação de digitação */
+.typing-container {
+  max-width: 800px;
+  font-size: 1.3rem;
+  line-height: 2;
+  text-align: justify;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid #146b0c;
+  border-right: 3px solid #146b0c;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  white-space: normal;
+  position: relative;
+}
+
+/* Cursor piscando ao final da digitação */
+.typing-container::after {
+  content: '';
+  display: inline-block;
+  width: 0.5em;
+  height: 1.3em;
+  background-color: #fff;
+  margin-left: 4px;
+  vertical-align: bottom;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+/* Animação do cursor */
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Destaques no texto (opcional) */
+strong {
+  color: #ffdd99;
+  font-weight: bold;
+}
+
+.sair {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sair:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#botoes {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  background-color: #146b0c;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #0f4e08;
+}
+a/* Fundo e alinhamento geral */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Mensagem central com estilo de cartão */
+.typing-container {
+  max-width: 900px;
+  font-size: 1.3rem;
+  line-height: 2;
+  text-align: justify;
+  padding: 2rem 2.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #00c853;
+  border-right: 4px solid #00c853;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  white-space: normal;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Efeito de digitação: cursor */
+.typing-container::after {
+  content: '';
+  display: inline-block;
+  width: 0.5em;
+  height: 1.3em;
+  background-color: #ffffff;
+  margin-left: 5px;
+  vertical-align: bottom;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+/* Animação do cursor */
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Animação de entrada suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Destaques no texto */
+strong {
+  color: #ffe57f;
+  font-weight: bold;
+}
+
+/* Botão de sair no topo */
+.sair {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.sair:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Botões no final */
+#botoes {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Botão de ação principal */
+.btn {
+  background-color: #146b0c;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #009624;
+  transform: scale(1.05);
+}

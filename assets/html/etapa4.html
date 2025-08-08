@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cortes Bovinos</title>
+  <link rel="stylesheet" href="../css/etapa4.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="mensagem">
+        <span class="emoji">🥩</span> Cortes Especiais 
+    </h1>
+
+    <div class="carrossel">
+      <img id="imagem" src="../images/bifes/acem pedaco.png" alt="Corte de carne">
+      <p class="descricao" id="descricao">Acém - Corte dianteiro, ótimo para cozidos ou moído.</p>
+    </div>
+
+    <div class="navegacao">
+      <button id="btnAnterior" onclick="voltar()">Anterior</button>
+      <button id="btnProximo" onclick="proximo()">Próximo</button>
+    </div>
+
+    <div class="botao-container">
+      <button onclick="window.location.href='resultado_final.html'">Finalizar</button>
+    </div>
+  </div>
+
+  <script src="../js/etapa4.js"></script>
+</body>
+</html>

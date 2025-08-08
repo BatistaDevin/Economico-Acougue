@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resultado Final</title>
+  <link rel="stylesheet" href="../css/resultado_final.css">
+</head>
+<body>
+  <div class="resultado-container">
+    <h1>Resultado Final</h1>
+    <p id="mensagemFinal">Carregando resultado...</p>
+    <button class="btn-voltar" onclick="window.location.href='inicioTreinamento.html'">Voltar ao Início</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mensagem = document.getElementById("mensagemFinal");
+
+      const userLogado = JSON.parse(localStorage.getItem("userLogado"));
+      const quiz1 = JSON.parse(localStorage.getItem("quizData")) || {};
+      const quiz2 = JSON.parse(localStorage.getItem("quizVisualData")) || {};
+
+      if (!userLogado || !userLogado.user) {
+        mensagem.textContent = "Usuário não autenticado.";
+        return;
+      }
+
+      const nomeUsuario = userLogado.nome || userLogado.user;
+      const pontosQuiz1 = quiz1[userLogado.user] || 0;
+      const pontosQuiz2 = quiz2[userLogado.user] || 0;
+      const total = pontosQuiz1 + pontosQuiz2;
+      const totalMax = 12;
+
+      mensagem.innerHTML = `
+        Olá, <strong>${nomeUsuario}</strong>!<br><br>
+        Você concluiu os dois quizzes com um total de<br><br>
+        <strong>${total}</strong> acertos de <strong>${totalMax}</strong> perguntas.<br><br>
+        Excelente trabalho!
+      `;
+    });
+  </script>
+</body>
+</html>

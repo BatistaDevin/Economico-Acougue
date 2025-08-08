@@ -1,0 +1,74 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #F45100, #146b0c);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1000px;
+  width: 95%;
+  padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #fff;
+}
+
+.mensagem {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.imagem img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  border: 3px solid #fff;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.explicacao {
+  text-align: left;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.explicacao p {
+  margin-bottom: 10px;
+}
+
+.botao-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 900px;
+}
+
+button {
+  padding: 12px 28px;
+  background-color: #146b0c;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0f4e08;
+  transform: translateY(-2px);
+}
