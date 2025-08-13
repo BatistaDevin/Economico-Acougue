@@ -9,7 +9,7 @@ function entrar(){
   formData.append("usuario", usuario.value);
   formData.append("senha", senha.value);
 
-  fetch("http://localhost/Economico-Acougue/assets/php/login.php", {
+  fetch("http://localhost/Economico-Acougue/php/login.php", {
     method: "POST",
     body: formData
   })

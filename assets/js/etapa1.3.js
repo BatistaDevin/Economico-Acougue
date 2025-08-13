@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // Verifica se o usuário já respondeu
+  // Bloqueia se já respondeu
   if (quizData[userLogado.user]) {
     form.style.display = "none";
     resultado.innerHTML = `Você já respondeu o quiz. Acertos: ${quizData[userLogado.user]} / 6`;
@@ -22,16 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
 
     const respostasCorretas = {
-      q1: "c", // Filé Mignon
-      q2: "b", // Picanha
-      q3: "b", // Patinho
-      q4: "a", // Cupim
-      q5: "a", // Coxão duro
-      q6: "b", // Acém
+      q1: "c",
+      q2: "b",
+      q3: "b",
+      q4: "a",
+      q5: "a",
+      q6: "b",
     };
 
     let pontos = 0;
-
     Object.keys(respostasCorretas).forEach((questao) => {
       const selecionada = form.querySelector(`input[name="${questao}"]:checked`);
       if (selecionada && selecionada.value === respostasCorretas[questao]) {
@@ -39,11 +38,36 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Armazena pontuação por usuário
+    const erros = 6 - pontos;
+
+    // Salva no localStorage pra bloquear nova resposta
     quizData[userLogado.user] = pontos;
     localStorage.setItem("quizData", JSON.stringify(quizData));
 
     form.style.display = "none";
     resultado.innerHTML = `Você acertou ${pontos} de 6 perguntas!`;
+
+    // Envia resultado para o banco
+    fetch("http://localhost/Economico-Acougue/php/salvar_resultado.php", {
+      method: "POST",
+      credentials: "include",
+      body: JSON.stringify({
+        usuario_nome: userLogado.nome || userLogado.user,
+        quiz_nome: "quiz1",
+        acertos: pontos,
+        erros: erros,
+        total_perguntas: 6
+      }),
+      headers: { "Content-Type": "application/json" }
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.status !== "ok") {
+        alert("Erro ao salvar resultado: " + data.mensagem);
+      }
+    })
+    .catch(err => {
+      alert("Erro na requisição: " + err.message);
+    });
   });
 });

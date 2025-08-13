@@ -83,7 +83,7 @@ function cadastrar(){
     formData.append("usuario", usuario.value);
     formData.append("senha", senha.value);
 
-    fetch("http://localhost/Economico-Acougue/assets/php/cadastrar.php", {
+    fetch("http://localhost/Economico-Acougue/php/cadastrar.php", {
       method: "POST",
       body: formData
     })
