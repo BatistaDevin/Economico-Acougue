@@ -1,0 +1,138 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f41c00, #146b0c);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 95%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.mensagem {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 15px;
+}
+
+.main-image {
+    margin-bottom: 30px;
+}
+
+.main-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.explicacao {
+    text-align: left;
+    padding: 0 10px;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.subtitulo {
+    font-size: 1.5em;
+    color: #ffd700;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.info-list li {
+    margin-bottom: 8px;
+}
+
+.info-list p {
+    margin: 0;
+}
+
+.corte-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.corte-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.corte-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #fff;
+}
+
+.corte-text {
+    flex: 1;
+}
+
+.corte-text h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.corte-text p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.botao-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 28px;
+    background-color: #146b0c;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0f4e08;
+    transform: translateY(-2px);
+}

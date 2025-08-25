@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz: Ficha Técnica</title>
+  <link rel="stylesheet" href="../css/quiz5.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="titulo-quiz">Avaliação de Conhecimento</h1>
+    <p class="subtitulo-quiz">Responda às perguntas sobre o Acém Bovino para testar seus conhecimentos.</p>
+
+    <div id="quiz-container">
+      <form id="quiz-form">
+        
+        <div class="card-pergunta">
+          <p class="pergunta"><strong>1. O acém é um corte de primeira ou de segunda? Onde, especificamente, ele se localiza no quarto dianteiro do boi e quais são seus nomes alternativos mais comuns?</strong></p>
+          <div class="opcoes">
+            <label class="opcao-item"><input type="radio" name="q1" value="a" /> O acém é uma carne de segunda. Ele está localizado na parte traseira do quarto dianteiro, próximo ao pescoço e à paleta. Seus nomes alternativos incluem agulha e lombo de agulha.</label>
+            <label class="opcao-item"><input type="radio" name="q1" value="b" /> O acém é uma carne de primeira. Ele está localizado na parte superior do quarto traseiro, perto da alcatra. Seus nomes alternativos são fraldinha e lombo.</label>
+            <label class="opcao-item"><input type="radio" name="q1" value="c" /> O acém é uma carne de segunda. Ele está localizado na parte central do contrafilé. Seus nomes alternativos são patinho e músculo.</label>
+          </div>
+        </div>
+
+        <div class="card-pergunta">
+          <p class="pergunta"><strong>2. Um cliente, acostumado a comprar cortes nobres, está com o orçamento limitado e você precisa sugerir uma alternativa. Explique como você apresentaria o acém como uma opção econômica e saborosa, ressaltando o custo-benefício e a versatilidade, sem que ele sinta que está levando um produto de menor qualidade.</strong></p>
+          <div class="opcoes">
+            <label class="opcao-item"><input type="radio" name="q2" value="a" /> Eu reconheceria a preferência do cliente e diria: "O acém, apesar de ser mais econômico, é uma excelente opção para pratos de cozimento lento. Sua alta concentração de colágeno o torna incrivelmente macio e saboroso em preparos como ensopados ou carne de panela. É um corte que oferece um ótimo sabor por um preço acessível."</label>
+            <label class="opcao-item"><input type="radio" name="q2" value="b" /> Eu simplesmente apontaria para o acém e diria: "Esse é o mais barato que temos. Se o orçamento está curto, é a melhor opção. É uma carne de segunda."</label>
+            <label class="opcao-item"><input type="radio" name="q2" value="c" /> Eu o convenceria de que o acém é uma nova tendência para churrasco e pode ser preparado na grelha como um bife de picanha, dizendo: "Ele fica macio se for grelhado rapidamente em fogo alto.</label>
+            <label class="opcao-item"><input type="radio" name="q2" value="d" /> Eu o aconselharia a voltar quando tivesse mais dinheiro, dizendo: "Se você está acostumado com cortes nobres, não vai gostar do acém. É melhor economizar e comprar o corte que você realmente prefere."</label>
+          </div>
+        </div>
+        
+        <div class="card-pergunta">
+          <p class="pergunta"><strong>3. Você está inspecionando uma nova remessa de acém no balcão e percebe que uma das peças tem uma coloração cinzenta em vez do vermelho vibrante. O que isso pode indicar e qual seria sua ação imediata como responsável pelo açougue?</strong></p>
+          <div class="opcoes">
+            <label class="opcao-item"><input type="radio" name="q3" value="a" /> A coloração cinzenta é normal em carnes que ficaram expostas por um tempo. Ação imediata é simplesmente cortar as partes cinzentas e colocar a peça restante novamente à venda.</label>
+            <label class="opcao-item"><input type="radio" name="q3" value="b" /> A coloração cinzenta indica que a carne pode estar em processo de oxidação ou com a qualidade comprometida. A ação imediata seria remover a peça do balcão, inspecionar a temperatura de armazenamento e contatar o Lider para relatar o problema.</label>
+            <label class="opcao-item"><input type="radio" name="q3" value="c" /> A coloração cinzenta significa que a carne está bem maturada. Não há necessidade de ação imediata, pois a carne está em perfeitas condições para ser vendida.</label>
+            <label class="opcao-item"><input type="radio" name="q3" value="d" /> A cor não é um bom indicador de qualidade. A única ação necessária seria cheirar a carne. Se o odor estiver bom, ela pode ser vendida.</label>
+          </div>
+        </div>
+
+        <button type="submit">Enviar Respostas</button>
+      </form>
+      <div id="resultado"></div>
+    </div>
+    
+    <div class="botao-container">
+      <button onclick="window.location.href='gancheira.html'">Voltar</button>
+    </div>
+  </div>
+
+  <script src="../js/quiz5.js"></script>
+</body>
+</html>
